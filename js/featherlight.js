@@ -8,6 +8,12 @@
 (function($) {
 	"use strict";
 
+	var viewportWidth = $(window).width();
+	var queryWidth = 800;
+	
+	
+	
+
 	if('undefined' === typeof $) {
 		if('console' in window){ window.console.info('Too much lightness, Featherlight needs jQuery.'); }
 		return;
@@ -35,7 +41,7 @@
 	*/
 
 	function Featherlight($content, config, titleIndex, infoIndex) {
-		console.log(infoIndex + "WOWOWOWOW");
+		//console.log(infoIndex + "WOWOWOWOW");
 		if(this instanceof Featherlight) {  /* called with new */
 			this.id = Featherlight.id++;
 			this.setup($content, config, titleIndex, infoIndex);
@@ -77,7 +83,7 @@
 		closeIcon:    '&#10005;',             /* Close icon */
 		otherClose:   null,                   /* Selector for alternate close buttons (e.g. "a.close") */
 		beforeOpen:   function(){
-							//console.log(titleIndex);
+							////console.log(titleIndex);
 
 						},
 		beforeContent: $.noop,                /* Called when content is loaded. Gets event as parameter, this contains all data */
@@ -89,7 +95,7 @@
 		type:         null,                   /* Specify type of lightbox. If unset, it will check for the targetAttrs value. */
 		contentFilters: ['jquery', 'image', 'html', 'ajax', 'text'], /* List of content filters to use to determine the content */
 		artistName: "We Became Owls",
-		artistInfo: "pussy",
+		artistInfo: "default",
 
 
 		/*** methods ***/
@@ -100,7 +106,7 @@
 				config = target;
 				target = undefined;
 			}
-			//console.log(titleIndex);
+			////console.log(titleIndex);
 			var self = $.extend(this, config, {target: target}),
 				css = !self.resetCss ? self.namespace : self.namespace+'-reset', /* by adding -reset to the classname, we reset all the default css */
 				$background = $(self.background || [
@@ -341,7 +347,7 @@
 		/*** class methods ***/
 		/* read element's attributes starting with data-featherlight- */
 		readElementConfig: function(element) {
-			//console.log(titleIndex);
+			////console.log(titleIndex);
 			var Klass = this,
 				config = {};
 			if (element && element.attributes) {
@@ -386,7 +392,7 @@
 		},
 
 		attach: function($source, $content, config, titleIndex, infoIndex) {
-			console.log("MEOW: " + titleIndex);
+			//console.log("MEOW: " + titleIndex);
 			var Klass = this;
 			if (typeof $content === 'object' && $content instanceof $ === false && !config) {
 				config = $content;
@@ -401,7 +407,7 @@
 			var tempConfig = $.extend({}, Klass.defaults, Klass.readElementConfig($source[0]), config);
 			$source.on(tempConfig.openTrigger+'.'+tempConfig.namespace, tempConfig.filter, titleIndex, function(event) {
 				/* ... since we might as well compute the config on the actual target */
-				console.log(titleIndex);
+				//console.log(titleIndex);
 				var elemConfig = $.extend({$source: $source, $currentTarget: $(this)}, Klass.readElementConfig($source[0]), Klass.readElementConfig(this), config);
 				new Klass($content, elemConfig).open(event);
 			});
@@ -445,7 +451,7 @@
 					this.$instance.find('.'+this.namespace+'-close:first').click();
 					event.preventDefault();
 				} else {
-					console.log('pass');
+					//console.log('pass');
 					return _super(event);
 				}
 			}
@@ -458,10 +464,11 @@
 
 	/* bind jQuery elements to trigger featherlight */
 	$.fn.featherlight = function($content, config, titleIndex, infoIndex) {
-		console.log(titleIndex);
+		//console.log(titleIndex);
 		return Featherlight.attach(this, $content, config, titleIndex, infoIndex);
 	};
-
+if (viewportWidth > queryWidth){
 	/* bind featherlight on ready if config autoBind is set */
 	$(document).ready(function(){ Featherlight._onReady(); });
+} //end of conditional statement
 }(jQuery));

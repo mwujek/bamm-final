@@ -3,21 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Matt Wujek" />
-	<meta name="keywords" content="Matt Wujek graphic design student San Francisco Walla interaction web ux user experience"/>
-	<meta name="description" content="Portfolio of Matt Wujek, interaction designer residing in San Francisco."/>
-	<meta property="og:title" content="Matt Wujek &equiv; Portfolio" />
-	<meta property="og:url" content="http://www.mattwujek.com/" />
-	<meta property="og:image" content="http://mattwujek.com/fb.png"/>
-	<meta property="og:site_name" content="Matt Wujek &equiv; Portfolio"/>
+	<meta name="author" content="Bamm.tv" />
+	<meta name="keywords" content="BAMM bricks and mortar media world worldwide san francisco california music licensing content distribution"/>
+	<meta name="description" content="BAMM.tv: Transform your brand with music."/>
+	<meta property="og:title" content="BAMM.tv" />
+	<meta property="og:url" content="https://www.bamm.tv/" />
+	<meta property="og:image" content="https://www.bamm.tv/img/logo-medium.png"/>
+	<meta property="og:site_name" content="BAMM.tv: Transform your brand with music."/>
 	<meta property="og:type" content="website" /> 
 
 	<link href='img/icon.ico' rel='shortcut icon' type='image/ico'>
 
 	<title>BAMM.tv</title>
-
-	<!-- <link rel="stylesheet" href="css/swiper.css"> -->
-
 
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/featherlight.css">
@@ -43,7 +40,7 @@
 			</div>
 		</a>
 		<ul>
-			<li><a href="#problem-section">The Problems</a></li>
+			<li><a href="#problem-section">The Problem</a></li>
 			<li><a href="#solution-page">Our Solution</a></li>
 			<li><a href="#technology-section">Technology</a></li>
 			<li><a href="#artists-section">Artists</a></li>
@@ -65,7 +62,7 @@
 
 			<img src="img/logo-medium.png">
 			<h1>BAMM.tv</h1>
-			<h2>Music licensing and content delivery made easy.</h2>
+			<h2>Transform your brand with music...</h2>
 			<span class="down-arrow"></span>
 
 		</div>
@@ -79,21 +76,29 @@
 
 			<div class="col col-problem">
 				<img src="img/watercolor-problem.png">
-				<h1 class="mobile-hidden">The Problem</h1>
-				<p class="mobile-hidden">Music licensing and contnent delivery is a pain.</p>
-				<ul class="row problem-list">
-					<li class=""><a href="#" class="first active-problem-link">Vision</a></li>
-					<li class=""><a href="#" class="second flash-btn">Obstacles</a></li>
-					<li class=""><a href="#" class="third">Solution</a></li>
-				</ul>
+				<h1 class="desktop-hidden">The Problem</h1>
+				<p class="desktop-hidden">Music licensing and contnent delivery is a pain.</p>
+				
 			</div>
 			<div class="col col-animation">
 				<div id="animation"></div>
-				<h1 class="problem-title">The Vision</h1>
-				<p class="problem-description">You have an idea of how to enhance your services and build stronger customer relationships through music. It should be easy to find perfectly reasonable business partners that are interested in making a deal, but it's not.</p>
+				<img class="mobile-animation" src="img/b2b-animation-a.gif">
+				<div class="problem-copy">
+					<h1 class="problem-title">The Vision</h1>
+					<p class="problem-description">You have an idea of how to enhance your services and build stronger customer relationships through music. It should be easy to find perfectly reasonable business partners interested in making a deal, but it’s not.</p>
+				</div>
 			</div>
 
 		</section>
+		<div class="row problem-row">
+			<ul class="col problem-list">
+				<li><a href="#" class="first active-problem-link">Vision</a></li>
+				<li><span class="arrow-list">&#10142;</span></li>
+				<li><a href="#" class="second flash-btn">Obstacles</a></li>
+				<li><span class="arrow-list">&#10142;</span></li>
+				<li><a href="#" class="third">Solution</a></li>
+			</ul>
+		</div>
 	</div>
 
 </div> <!-- end of full row -->
@@ -102,6 +107,8 @@
 	<section class="text-container solution-section">
 		<h1>Our Solution</h1>
 		<p>Find the best breaking artists. Produce exclusive, innovative content in exchange for a global license. Make it easy for you to deliver an interactive music experience to your customers and increase brand loyalty through music.</p>
+		<p class="instruction-text mobile-hidden">Click a category below to learn more</p>
+		<div class="down-arrow-sketch"></div>
 		<p class="hidden-solution">Want to learn about our solutions changing music, technology, business models and brand  differentiation?</p>
 		<div class="btn hidden-solution">Tap Here</div>
 	</section>
@@ -121,10 +128,10 @@
 
 			<div id="solution-ml" class="col">
 				<h1>Music Licensing</h1>
-				<p><span class="bold">The Problem: </span>Licensing recorded music is extremely complicated, expensive and doesn't scale. Multiple licenses are often required, and the rights may be held by a complicated mixture of labels, publishers, and individuals.</p>
-				<p><span class="bold">Our Solution: </span>>BAMM.tv doesn't license studio recordings; instead, we curate and produce live performances of songs at no cost to artists in exchange for a global, perpetual license. All of our content (including documentaries, podcasts, and music culture programming) is produced under the same license, making it simple for us to grant you a license to all or customized portions of the library.</p>
+				<p><span class="bold">The Problem: </span>Licensing recorded music is extremely complicated, expensive and doesn’t scale. Multiple licenses are often required, and the rights may be held by a complex mixture of labels, publishers, and individuals.</p>
+				<p><span class="bold">Our Solution: </span>BAMM.tv doesn’t license studio recordings; instead, we curate and produce live performances of songs at no cost to artists in exchange for a global, perpetual license. All of our content (including documentaries, podcasts, and music culture programming) is produced under the same license, making it simple for us to grant you a license to all or customized portions of the library.</p>
 			</div>
-			<div class="col"><h1>...</h1></div>
+			<div class="col"><img class="solution-diagram" src="img/diagram.jpg"></div>
 		</article>
 
 
@@ -136,7 +143,9 @@
 				<p><span class="bold">The Problem: </span>Getting access to great content is only the first step. In order to give your customers the quality user experience they expect, you need to deliver that content seamlessly to mobile, web and TV devices without interruption.</p>
 				<p><span class="bold">Our Solution: </span>BAMM.tv has developed a robust backend system for managing and distributing content to any device, anywhere in the world. Our API consists of a powerful set of tools for creating custom apps or integrating features into your existing stack. And we utilize industry leading content delivery networks for the most reliable content delivery regardless of territory. Think of BAMM.tv as your music television studio in the cloud.</p>
 			</div>
-			<div class="col"><h1>...</h1></div>
+			<div class="col relative-col">
+				<img src="img/solution-collage.jpg" class="collage">
+			</div>
 		</article>
 
 
@@ -148,7 +157,7 @@
 				<p><span class="bold">Our Solution: </span>Even if you manage to turn the licensing and technology requirements into a successful business model, the exact same music content is available for free all over the Internet. So how do you leverage music to create loyalty to your branded music ecosystem?
 				</p>
 			</div>
-			<div class="col"><h1>...</h1></div>
+			<div class="col"><h1 class="hide-for-layout">...</h1></div>
 		</article>
 
 
@@ -157,43 +166,70 @@
 			<div id="solution-d" class="col">
 				<h1>Differentiation</h1>
 				<p><span class="bold">The Problem: </span>Music content is available for free all over the Internet. By offering a branded music experience to your customers, you are competing with free. So how can you leverage music to keep customers in your online ecosystem?</p>
-				<p><span class="bold">Our Solution: </span>Foster music discovery through exclusive, high-quality content. One frustration that comes with every song being available with one click is separating the great new music from the cumulative digital noise and the standard cannon of popular music. Your customers don't want access to all music - they want to discover good music, and they want that music to sound and look good, too. BAMM.tv is a curator of breaking artists, and we make content your customers will want to introduce to their friends. We are the taste-makers for the taste-makers.</p>
+				<p><span class="bold">Our Solution: </span>Foster music discovery through exclusive, high-quality content. One frustration that comes with every song being available with one click is separating the great new music from the cumulative digital noise and the standard canon of popular music. Your customers don’t want access to all music - they want to discover good music, and they want that music to sound and look good, too. BAMM.tv is a curator of breaking artists, and we make content your customers will want to introduce to their friends. We are the taste-makers for the taste- makers.</p>
 			</div>
-			<div class="col"><h1>...</h1></div>
+			<div class="col"><h1 class="hide-for-layout">...</h1></div>
 		</article> <!-- end of row -->
-		<a href="#" class="btn slide-toggle-btn">Collapse Section</a>
-
 
 	</section> <!-- end of solution expanded -->
+	<div class="toggle-div"><a href="#solution-page" class="btn slide-toggle-btn">Collapse Section</a></div>
 </div> <!-- end of solution expanded -->
+
 
 <!-- technology section -->
 <div class="dual-pane-section row" id="technology-section">
 	<div class="col col-left">
-		<img src="img/tech-title.png">
+		<img src="img/tech-title.png" class="title-tech">
 		<!-- <h1>Technology</h1>
 		<p>Your television studio in the cloud.</p> -->
 	</div>
-	<div class="col col-middle" id="tech-mid"><h1><a href="#tech-mid">Learn more about our technology</a></h1></div>
+	
+	<div class="col col-middle" id="tech-mid">
+		<div class="col-title">
+			<h1>Technology</h1>
+			<p class="italic">Your television studio in the cloud.</p>
+		</div>
+		<a href="#tech-mid">Learn more<!-- about our technology --></a>
+	</div>
 	<div class="col col-right">
 		<span class="stroke stroke-a"></span>
 
 		<div class="swiper-container tech-slider">
-				<!--First Slide-->
-				<div class="swiper-slide"> 
-					<!-- <h1 class="slide-title">First</h1> -->
-					<img src="img/tech1.png">
-					<p>BAMM.tv provides an end-to-end solution for creating, managing and distributing content to mobile, web and TV devices so our partners don't have to. Our partner API can be integrated seamlessly into your existing properties, or we work with you to build a customized solution.</p>
-				</div>
+			<!--First Slide-->
+			<div class="swiper-slide">
+				<!-- <h1 class="slide-title">First</h1> -->
+				<img src="img/tech1.png">
+				<p>BAMM.tv provides an end-to-end solution for creating, managing and distributing content to any device -- so our partners don’t have to. You can use our API to integrate content seamlessly into your existing properties, or we work with you to build a customized solution.</p>
+			</div>
 
-				<!--Second Slide-->
-				<div class="swiper-slide">
-					<img src="img/tech2.png">
-					<h1 class="slide-title">Second Slide</h1>
-					<p>Mobile phones, tablets and television systems are simply different endpoints for a single cloud-based platform. BAMM.tv works behind the scenes to provide your most valued customers with an exclusive, interactive, white label experience with your brand.</p>
-				</div>
-<!-- 			<div class="pagination tech-pag"></div>
- -->		</div>
+			<!--Second Slide-->
+			<div class="swiper-slide">
+				<img src="img/tech2.png">
+				<h1 class="slide-title">Second Slide</h1>
+				<p>Mobile phones, tablets and television systems are simply different endpoints for a single cloud-based platform. BAMM.tv works behind the scenes to provide your most valued customers with an exclusive, interactive, white label experience with your brand.</p>
+			</div>
+
+			<!--Third Slide-->
+			<div class="swiper-slide">
+				<img src="img/tech2.png">
+				<h1 class="slide-title">Third Slide</h1>
+				<p>Each hosted asset is supported with editorial content and rich metadata available in multiple languages. The backend first detects the territory, screen type and connection speed, then serves the relevant data bundle along with location-specific features, user information and subscription management.</p>
+			</div>
+
+			<!--Fourth Slide-->
+			<div class="swiper-slide">
+				<img src="img/tech2.png">
+				<h1 class="slide-title">Fourth Slide</h1>
+				<p>BAMM.tv provides fully managed services and support throughout the relationship. A branded dashboard allows partners to access real-time data, content tools and performance metrics. As your media strategy grows, we offer training and tutorials to help bring more of your operations in-house.</p>
+			</div>
+
+			<!--Fiftth Slide-->
+			<div class="swiper-slide">
+				<img src="img/tech2.png">
+				<h1 class="slide-title">Second Slide</h1>
+				<p>copy to add: there are a variety of use cases for our technology..</p>
+			</div>
+		</div>
 
 	</div> <!-- end of right section -->
 </div> <!-- end of technology -->
@@ -201,55 +237,90 @@
 <!-- artists section -->
 <div class="dual-pane-section row" id="artists-section">
 	<div class="col col-left">
-		<img src="img/artists-title.png">
+		<img src="img/artists-title.png" class="title">
 		<!-- <h1>Artists</h1>
 		<p>We love our artists, and so do the tastemakers.</p> -->
 	</div>
-	<div class="col col-middle" id="artists-mid"><h1><a href="#artists-mid">Learn more about our artists</a></h1></div>
+	<div class="col col-middle" id="artists-mid">
+		<div class="col-title">
+			<h1>Artists</h1>
+			<p class="italic">We love our Artists, and so do the tastemakers</p>
+		</div>
+		<a href="#artists-mid">Learn more<!-- about our technology --></a>
+	</div>
 	<div class="col col-right">
 		<span class="stroke stroke-b"></span>
-		<iframe class="lightbox" src="//player.vimeo.com/video/100126080" width="600" height="337" id="video" style="border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 
 
 		<div class="swiper-container artists-slider">
-				<!--First Slide-->
-				<div class="swiper-slide"> 
-					<img src="img/artists1.jpg">
-					<!-- <h1 class="slide-title">First</h1> -->
-					<p>Whether it's placement in a Jack Daniels ad campaign, a performance on Late Night with David Letterman, or placement in a summer blockbuster movie trailer, the world is hearing more of BAMM.tv artists every day.</p>
+			<!--First Slide-->
+			<div class="swiper-slide"> 
+				<img src="img/artists1.jpg" class="title">
+				<!-- <h1 class="slide-title">First</h1> -->
+				<p>Whether it's placement in a Jack Daniels ad campaign, a performance on Late Night with David Letterman, or placement in a summer blockbuster movie trailer, the world is hearing more of BAMM.tv artists every day.</p>
+				<p><a href="5" class="slider-link">See how major companies are utilizing indie artists to enhance their brand.</a></p>
+			</div>
+
+			<!--Second Slide-->
+			<div class="swiper-slide margin-top-20">
+
+				<a data-featherlight="#video" class='lightbox-targetlink' href="#"><img class="slide-heading-img" src="img/thumbnail-typhoon.jpg" class="lightbox-target"></a>
+				<h1 class="slide-title">Typhoon</h1>
+				<p>While it’s likely you haven’t heard of Typhoon, the band’s story is a perfect example of BAMM.tv connecting with talented artists before they become more widely known. Back in 2011, BAMM.tv caught wind of a band getting some attention in Portland, Oregon, and immediately fell in love. Since shooting a live performance at the legendary music festival - South by Southwest - word of the the band spread throughout the U.S. Typhoon made its television debut on Late Night with David Letterman, opened for The Shins and The Decembrists, and had its music featured on television shows for NBC and the SciFy Newtwork. The band has received critical acclaim from the likes of NPR, Spin, KEXP, The Wall Street Journal, Entertainment Weekly.</p>
+			</div>
+
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-lsc.jpg" class="lightbox-target"></a>
+				<h1 class="slide-title">La Santa Cecilia</h1>
+				<p>The momentum behind La Santa Cecilia can’t be denied. Most recently, the band won a Grammy for Best Latin Rock/Alternative Album and collaborated with Elvis Costello on “Losing Game”. La Santa Cecilia’s music has been featured on the Emmy award-winning series Weeds, the independent feature Dish, and the documentary Re-Encounters (about Oaxacan artist Alejandro Santiago). Add to that an on-camera appearance on HBO’s Emmy award-winning hit show Entourage (the episode also featured the songs “Chicle” and “El Farol”). The band is now signed to a major label, but BAMM.tv saw their potential early and shot a studio session with them in 2012, complete with an interview and 7 performance videos. La Santa Cecilia’s videos have accumulated over 1.2 million views on Youtube alone.</p>
+			</div>
+
+			<div class="swiper-slide"> 
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-flashbulb.jpg" class="lightbox-target"></a>
+				<h1 class="slide-title">The Flashbulb</h1>
+				<p>The Flashbulb Benn Jordan is a great example of how traditional metrics no longer tell the entire story when it comes to music popularity. London International Award winner and a Cannes Grand Prix recipient, Jordan has taken a nontraditional route to a successful music career. As his television and film composer work earned him wider recognition, his personal projects increased in popularity. All the way back in 2008, Jordan made news by releasing Soundtrack to a Vacant Life on BitTorrent (at the time, BitTorrent was a P2P file-sharing site), essentially giving fans the album for free while directing them on how to make financial contributions. The experiment paid off. In addition to supporting other artists through Alphabasic - a non-profit record label where 100% of profit goes directly to the artists - Jordan’s music continues to be some most widely ripped and shared music online.</p>
+			</div>
+
+
+
+
+			<section class="swiper-slide quote-section-slide"> 
+				<h1 class="slide-title">Major brands and indie artist:<br>a powerful combination</h1>
+				<p>You might be looking through our content and asking, “Where’s the Justin Bieber, the Miley Cyrus, the Shakira?” We don’t have it, and the reason has more to do with making smart decisions about your business model than accessibility of the content. Working with major artists can be a restrictive endeavor. There is little licensing flexibility, it’s incredibly costly, and it can be a logistical maze. The likes of Coca-Cola, McDonald’s, and Apple have demonstrated the benefits of working with breaking artists instead of the known quantity.</p>
+				<div class="quotes-artists">
+					<div class="quote-slides">
+						<p><span class="quote-start"></span>For a brand like Coca-Cola, exploring independent artists provides a deep well of creative talent, while often providing a more cost effective opportunity to further leverage both the artist and the music beyond a traditional TV spot. We have found that costs associated with live performances, streaming concerts, PR events, creation of additional digital video content can be lower than those same costs associated with more established talent.<span class="quote-end"></span></p>
+						<p class="quote-source">Joe Belliotti, Head of Global Music Marketing, Coca-Cola<span class="italic">Source: <a href="http://www.forbes.com/sites/steveolenski/2015/01/15/why-big-brands-use-indie-artists/2/">&quot;Why Big Brands Use Indie Artists&quot;</a>, Steve Olenski, Forbes (1/15/15)</span></p>
+					</div>
+					<div class="quote-slides">
+						<p><span class="quote-start"></span>Working with independent musicians is a key element to our creative success. Authenticity is central to our brand’s values, and collaborating with indie artists has helped us put Airbnb’s DNA into every piece of work that we do.<span class="quote-end"></span></p>
+						<p class="quote-source">Jonathan Mildenhall, CMO, Airbnb<span class="italic">Source: <a href="http://www.forbes.com/sites/steveolenski/2015/01/15/why-big-brands-use-indie-artists/2/">&quot;Why Big Brands Use Indie Artists&quot;</a>, Steve Olenski, Forbes (1/15/15)</span></p>
+					</div>
+
+					<div class="quote-slides">
+						<p><span class="quote-start"></span>Sometimes there’s more room for flexibility, innovation and co-creation when working with an indie artists.<span class="quote-end"></span></p>
+						<p class="quote-source">Deborah Wahl, CMO, McDonald’s<span class="italic">Source: <a href="http://www.forbes.com/sites/steveolenski/2015/01/15/why-big-brands-use-indie-artists/2/">&quot;Why Big Brands Use Indie Artists&quot;</a>, Steve Olenski, Forbes (1/15/15)</span></p>
+					</div>
+
+					<div class="quote-slides">
+						<p><span class="quote-start"></span>Music can speak to any number of audiences. But 18-34s have long been a branding sweet spot, and today’s youth seem to have a special affinity for song. Eighty percent of millennials regularly search, download and listen to music over the Internet, according to a 2009 Deloitte survey , versus 60 percent of all consumers.<span class="quote-end"></span></p>
+						<p class="quote-source"><span class="italic">Source: <a href="http://www.adweek.com/news/advertising-branding/behind-music-138995">&quot;Behind The Music&quot;</a>, Gabriel Beltrone, Adweek (3/12/12)</span></p>
+
+					</div>
+
+					<div class="quote-slides">
+						<p><span class="quote-start"></span>Millennials also associate more strongly with the value of “discovery” than Gen X and earlier, according to 2010 research from consumer research firm Iconoculture. In other words, introducing this demo to new bands can seem like a particularly good way for brands to endear themselves.<span class="quote-end"></span></p>
+						<p class="quote-source"><span class="italic">Source: <a href="http://www.adweek.com/news/advertising-branding/behind-music-138995">&quot;Behind The Music&quot;</a>, Gabriel Beltrone, Adweek (3/12/12)</span></p>
+
+					</div>
 				</div>
+			</section>
+		
+	</div>
 
-				<!--Second Slide-->
-				<div class="swiper-slide margin-top-20">
-
-					<a data-featherlight="#video" class='lightbox-targetlink' href="#"><img src="img/artists2.png" class="lightbox-target"></a>
-					<h1 class="slide-title">Typhoon</h1>
-					<p>While it's likely you haven't heard of Typhoon, the band's story is a perfect example of BAMM.tv connecting with talented artists before they become more widely known. Back in 2011, BAMM.tv caught wind of a band getting some attention in Portland, Oregon, and immediately fell in love. Since shooting a live performance at the legendary music fesitval - South by Southwest - word of the the band spread nationally throughout the U.S. Typoon made its television debut on Late Night with David Letterman, opened for The Shins and The Decembrists, and has its music featured on television shows for NBC and the SciFy Newtwork. The band has recieved critical acclaim from the likes of NPR, Spin, KEXP, The Wall Street Journal, Entertainment Weekly.</p>
-				</div>
-
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists3.png" class="lightbox-target"></a>
-					<h1 class="slide-title">La Santa Cecilia</h1>
-					<p>The momentum behind La Santa Cecilia can't be denied. Most recently, the band won a Grammy for Best Latin Rock/Alternative Album and collaborated with Elvis Costello on "Losing Game". La Santa Cecilia's music has been featured on the Emmy award-winning series Weeds, the independent feature Dish, and the documentary Re-Encounters about Oaxacan artist Alejandro Santiago. Add to that an on-camera appearance on HBO's Emmy award-winning hit show Entourage (the episode also featured the songs "Chicle" and "El Farol"). While the band is now signed to a major label, BAMM.tv saw their potential early and shot a studio session with them in 2012, complete with an interview and 7 performance videos. La Santa Cecilia's videos have accumulated over 1.2 million views on Youtube alone</p>
-				</div>
-
-				<div class="swiper-slide"> 
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<h1 class="slide-title">The Flashbulb</h1>
-					<p>The Flashbulb Benn Jordan is a great example of how traditional metrics no longer tell the entire story when it comes to music popularity. London International Award winner and a Cannes Grand Prix recipient, Jordan has taken a non-traditional route to a successful music career. As his works as a television and film composer earned him wider recognition, his personal projects increased in popularity. All the way back in 2008, Jordan made news by releasing (italicize album title) Soundtrack to a Vacant Life on BitTorrent (at the time, BitTorrent was a P2P file-sharing site), essentailly giving fans the album for free while directing them on how to make financial contribututions. The experiment paid off. In addition to supporting other artsits through Alphabasic - a non-profit record label where 100% of profit goes directly to the artists - Jordan's music continues to be some most widely ripped and shared music online.</p>
-				</div>
-
-
-
-
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">What about Justin Beiber or Ariana Grande?</h1>
-					<p>We don't have it, and you don't want it. Most major label content is too expensive for us, and it's too expensive for you. What's more, that content is already on nearly every platform known to man, so it won't differentiate your brand. BAMM.tv's artists are breaking, affordable, and the content can't be found on any other platform.</p>
-				</div>
-		</div>
-
-	</div> <!-- end of right section -->
+</div> <!-- end of right section -->
 </div> <!-- end of artists -->
 
 <!-- library section -->
@@ -259,100 +330,153 @@
 		<!-- <h1>Library</h1>
 		<p>A music television network for today's fan.</p> -->
 	</div>
-	<div class="col col-middle" id="lib-mid"><h1><a href="#lib-mid">Learn More our library content</a></h1></div>
+
+
+	<div class="col col-middle" id="lib-mid">
+		<div class="col-title">
+			<h1>Library</h1>
+			<p class="italic">A music television network for today's fan.</p>
+		</div>
+		<a href="#lib-mid">Learn more<!-- about our technology --></a>
+	</div>
+
+
 	<div class="col col-right">
 		<span class="stroke stroke-c"></span>
 
 		<div class="swiper-container library-slider">
-				<!--First Slide-->
-				<div class="swiper-slide"> 
-					<div class="library-links">
-						<ul>
-							<li><a href="#" index="4" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-sp"></span>
-								<figcaption>
-									<p>Studio Performances</p>
-								</figcaption>
-							</figure></a></li>
+			<!--First Slide-->
+			<div class="swiper-slide"> 
+				<div class="library-links">
+					<ul>
+						<li><a href="#" index="4" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-sp"></span>
+							<figcaption>
+								<p>Studio Performances</p>
+							</figcaption>
+						</figure></a></li>
 
-							<li><a href="#" index="3" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-vp"></span>
-								<figcaption>
-									<p>Venue Performances</p>
-								</figcaption>
-							</figure></a></li>
+						<li><a href="#" index="3" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-vp"></span>
+							<figcaption>
+								<p>Venue Performances</p>
+							</figcaption>
+						</figure></a></li>
 
-							<li><a href="#" index="1" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-d"></span>
-								<figcaption>
-									<p>Documentaries <span class="hide-for-layout">LayoutSorry</span></p>
-								</figcaption>
-							</figure></a></li>
-						</ul>
-						<ul>
-							<li><a href="#" index="2" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-as"></span>
-								<figcaption>
-									<p>Animated Shorts</p>
-								</figcaption>
-							</figure></a></li>
+						<li><a href="#" index="1" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-d"></span>
+							<figcaption>
+								<p>Documentaries <span class="hide-for-layout hide-docs">LayoutSorry</span></p>
+							</figcaption>
+						</figure></a></li>
+					</ul>
+					<ul>
+						<li><a href="#" index="2" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-as"></span>
+							<figcaption>
+								<p>Animated Shorts</p>
+							</figcaption>
+						</figure></a></li>
 
-							<li><a href="#" index="5" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-tgs"></span>
-								<figcaption>
-									<p>To Go Shows <span class="hide-for-layout">LayoutSorry</span></p>
-								</figcaption>
-							</figure></a></li>
+						<li><a href="#" index="5" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-tgs"></span>
+							<figcaption>
+								<p>To Go Shows <span class="hide-for-layout">LayoutSorry</span></p>
+							</figcaption>
+						</figure></a></li>
 
-							<li><a href="#" index="6" class="library-genre-link"><figure>
-								<span class="genre-circle genre-circle-pc"></span>
-								<figcaption>
-									<p>Podcasts <span class="hide-for-layout">LayoutSorry</span></p>
-								</figcaption>
-							</figure></a></li>
-						</ul>
-					</div>
-					<p>The BAMM.tv library is large and diverse. Over 1,100 perfromance videos from breaking artists around the world. Everything from Rock, Hip Hop, Electronic, and Folk, including an extensive Latino catalogue. Documentaries, hosted content, podcasts, and more. Enough talking; check out the music! Continue through the slides to view our featured content or <a href="#">check out our entire library on our site.</a></p>
+						<li><a href="#" index="6" class="library-genre-link"><figure>
+							<span class="genre-circle genre-circle-pc"></span>
+							<figcaption>
+								<p>Podcasts <span class="hide-for-layout">LayoutSorry</span></p>
+							</figcaption>
+						</figure></a></li>
+					</ul>
 				</div>
+				<p>The BAMM.tv library is large and diverse. Over 1,100 perfromance videos from breaking artists around the world. Everything from Rock, Hip Hop, Electronic, and Folk, including an extensive Latino catalogue. Documentaries, hosted content, podcasts, and more. Enough talking; check out the music! Continue through the slides to view our featured content or <a href="https://www.bamm.tv/">check out our entire library on our site.</a></p>
+			</div>
 
-				<!--Second Slide-->
-				<div class="swiper-slide">
-					<h1 class="slide-title">Documentary</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p><strong>This One’s for You</strong> captures an artistic discourse between songwriters and their inspirations. Songwriters first give a musical performance for an audience of one – an individual who’s inspired the song in some way. A conversation follows, with both sides sharing reactions and personal experience with either the song or the topics the song addresses.</p>
-					<p>Many of our favorite songs are conversations in which we only hear one side of the story; This One’s for You captures what happens when the muse is given the microphone.</p>
-				</div>
+			<!--Second Slide-->
+			<div class="swiper-slide">
+				<h1 class="slide-title">Documentary</h1>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-tofy.jpg" class="lightbox-target"></a>
+				<p><strong>This One’s for You</strong> captures an artistic discourse between songwriters and their inspirations. Songwriters first give a musical performance for an audience of one – an individual who’s inspired the song in some way. A conversation follows, with both sides sharing reactions and personal experience with either the song or the topics the song addresses.</p>
+				<p>Many of our favorite songs are conversations in which we only hear one side of the story; This One’s for You captures what happens when the muse is given the microphone.</p>
+				<section class="library-featured">
+					<!-- <p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 3</a></li>
+					</ol> -->
+				</section>
+			</div>
 
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Animated Shorts</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p>Musical Yearbook is a storytelling series that explores the moment when a piece of music becomes inseparable from we are. Music is the dog-ear. It preserves who we were and contextualizes who we've become. People from all walks–both music creators and music lovers, writers of novels and writers of software, and everyone in between—tell their stories, thereby collectively creating a yearbook where we can compare and contrast who we were at the same point in our lives.</p>
-				</div>
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">Animated Shorts</h1>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-myb.jpg" class="lightbox-target"></a>
+				<p>Musical Yearbook is a storytelling series that explores the moment when a piece of music becomes inseparable from we are. Music is the dog-ear. It preserves who we were and contextualizes who we've become. People from all walks–both music creators and music lovers, writers of novels and writers of software, and everyone in between—tell their stories, thereby collectively creating a yearbook where we can compare and contrast who we were at the same point in our lives.</p>
+				<section class="library-featured">
+					<!-- <p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 3</a></li>
+					</ol> -->
+				</section>
+			</div>
 
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Venue Performance</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p>In an effort to produce performances that stand out from the endless stream of music videos posted online, BAMM.tv takes artists out of their traditional setting. To Go Show videos most often involve one continuous shot of the performer, and look to highlight a live performance taking place in an unusual, striking setting. This approach has been made popular by Vincent Moon of La Blogotheque, as well as other production companies. Artists are keen to really push these videos, too, because the performance is typically very different from the album version of the track. </p>
-				</div>
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">Venue Performance</h1>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-wallpaper.jpg" class="lightbox-target"></a>
+				<p>It’s impossible to recreate the energy of a live show, so BAMM.tv brings the production to where the best concerts are happening. We’ve captured intimate shows in cafes, raucous rock concerts, and navigated the masses at music festivals such as South by Southwest (Austin, Texans). You will find us wherever the most exciting music is happening. It’s the only way to find the best of the best music. </p>
+				<section class="library-featured">
+					<!-- <p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 3</a></li>
+					</ol> -->
+				</section>
+			</div>
 
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Studio Performance</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p>Musical Yearbook is a storytelling series that explores the moment when a piece of music becomes inseparable from we are. Music is the dog-ear. It preserves who we were and contextualizes who we've become. People from all walks–both music creators and music lovers, writers of novels and writers of software, and everyone in between—tell their stories, thereby collectively creating a yearbook where we can compare and contrast who we were at the same point in our lives.</p>
-				</div>
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">Studio Performance</h1>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-dlrn.jpg" class="lightbox-target"></a>
+				<p>We exist to showcase musicians we love, and one of the best ways to do that is to put them in a controlled studio environment and record what they do best - perform. Studio performances make up the majority of our content library and provide future fans an honest representation of the musicians. What comes out of the speakers is what came out of the band.</p>
+				<section class="library-featured">
+					<p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+					</ol>
+				</section>
+			</div>
 
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">To Go Shows</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p>Musical Yearbook is a storytelling series that explores the moment when a piece of music becomes inseparable from we are. Music is the dog-ear. It preserves who we were and contextualizes who we've become. People from all walks–both music creators and music lovers, writers of novels and writers of software, and everyone in between—tell their stories, thereby collectively creating a yearbook where we can compare and contrast who we were at the same point in our lives.</p>
-				</div>
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">To Go Shows</h1>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-silly-things.jpg" class="lightbox-target"></a>
+				<p>In an effort to produce performances that stand out from the endless stream of music videos posted online, BAMM.tv takes artists out of their traditional setting. To Go Show videos most often involve one continuous shot of the performer, and look to highlight a live performance taking place in an unusual, striking setting. This approach has been made popular by Vincent Moon of La Blogotheque, as well as other production companies. Artists are keen to really push these videos, too, because the performance is typically very different from the album version of the track.</p>
+				<section class="library-featured">
+					<p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+					</ol>
+				</section>
+			</div>
 
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Podcasts</h1>
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
-					<p>Musical Yearbook is a storytelling series that explores the moment when a piece of music becomes inseparable from we are. Music is the dog-ear. It preserves who we were and contextualizes who we've become. People from all walks–both music creators and music lovers, writers of novels and writers of software, and everyone in between—tell their stories, thereby collectively creating a yearbook where we can compare and contrast who we were at the same point in our lives.</p>
-				</div>
+			<div class="swiper-slide podcast-section"> 
+				<h1 class="slide-title">Podcasts</h1>
+				<ul class="platforms">
+					<li><a href="https://itunes.apple.com/us/podcast/bamm.tv/id842937689?mt=2"><img src="img/itunes.png"></a></li>
+					<li><a href="https://soundcloud.com/bammtv"><img src="img/soundcloud.png"></a></li>
+					<li><a href="http://www.stitcher.com/podcast/running-the-voodoo-down"><img src="img/stitcher.png"></a></li>
+				</ul>
+				<p>Music is not something we simply listen to while going about our lives. It impacts our relationships, memory, and culture. Music tells our stories, and through our collection of podcasts, BAMM.tv tells the stories behind the music we love and the artists that inspire.</p>
+				<iframe class="soundcloud-player" width="80%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/187524836&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+			</div>
 
 
 		</div>
@@ -367,56 +491,104 @@
 		<!-- <h1>Vision</h1>
 		<p>We fascilitate increased brand loyalty through original music content. In doing so, we introduce better music content to a larger audience, and that's what drives us.</p> -->
 	</div>
-	<div class="col col-middle" id="vision-mid"><h1><a href="#vision-mid">Learn more about our vision</a></h1></div>
+
+	<div class="col col-middle" id="vision-mid">
+		<div class="col-title">
+			<h1>Vision</h1>
+			<p class="italic">We facilitate increased brand loyalty by introducing better music content to a larger audience</p>
+		</div>
+		<a href="#vision-mid">Learn more<!-- about our technology --></a>
+	</div>
+
+
+
 	<div class="col col-right">
 		<span class="stroke stroke-d"></span>
 
 		<div class="swiper-container vision-slider">
-				<!--First Slide-->
-				<div class="swiper-slide">
-					<img src="img/case-logos.jpg">
-					<p>(Logos of Amazon, Xbox, Playstation, Yahoo! Screen, Roku, Mozilla, etc.) BAMM.tv brings music to the masses. Through exclusive distribution platforms, we promote our libray on screens artists can't access on their own. Between Amazon, Xbox, Playstation, Yahoo! Screen, Roku X millions of people are exposed to the best new music every day.</p>
-				</div>
+			<!--First Slide-->
+			<div class="swiper-slide">
+				<img src="img/case-logos.jpg" class="title">
+				<p>BAMM.tv brings music to the masses. Through exclusive distribution platforms, we promote our libray on screens artists can't access on their own. Between Amazon, Xbox, Playstation, Yahoo! Screen, Roku X millions of people are exposed to the best new music every day.</p>
+			</div>
 
-				<!--Second Slide-->
-				<div class="swiper-slide">
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/theshins.png" class="lightbox-target"></a>
+			<!--Second Slide-->
+			<div class="swiper-slide">
 
-					<h1 class="slide-title">Case Study: South by Southwest (Google Play + Youtube)</h1>
-					
-					<p style="font-size:20px; text-align:center;">Clients: Google Play, YouTube</p>
-					<p>Project: Live From The Lot was essentially a festival within the SXSW festival, streamed live throughout the world. BAMM.tv’s responsibilities were directing, camera operation, live mixing of the audio and live cutting of video for the stream. </p>
-				</div>
+				<h1 class="slide-title">South by Southwest</h1>
 
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/theshins.png" class="lightbox-target"></a>
 
-					<h1 class="slide-title">Case study: Proving Grounds: Jambox LiveAudio Series</h1>
-					
-					<p>BAMM.tv worked with product managers of LiveAudio, which is a key component to the fleet of Jambox speakers. BAMM.tv successfully pitched and produced Proving Grounds, an exclusive series introducing indie artists to a much wider audience. The program also educated the public about binaural recording practices. Content shot was then used in promotional materials throughout Jambox marketing .campaigns. Jawbone also licensed one of the songs to use in marketing and promotional campaigns Lastly, our team produced an “About LiveAudio” short for the company. This content proved to be a .(versatile music marketing asset across multiple Jambox platforms (web, mobile, newsletters, and more).</p>
-				</div>
+				<p><strong>Clients:</strong> Google Play, YouTube</p>
+				<p><strong>Project:</strong> Live From The Lot was essentially a festival within the SXSW festival, streamed live throughout the world. BAMM.tv’s responsibilities were directing, camera operation, live mixing of the audio and live cutting of video for the stream. </p>
+				<section class="library-featured">
+					<!-- <p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 3</a></li>
+					</ol> -->
+				</section>
 
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/noisepop.png" class="lightbox-target"></a>
+			</div>
 
-					<h1 class="slide-title">Case Study: Audyssey</h1>
-					
-					<p>BAMM.tv teamed up with Audyssey and San Francisco music staple Noise Pop (Treasure Island Music Festival, Noise Pop) to put on a series of pop-up concerts througout San Francisco. BAMM.tv was responsible for curating the artists, location, set-design, production, and post-production. Audyssey then incorporated the content into a larger, multi-city series of pop-up shows called The Neighborhood.tv Sessions, coordinating with similar events in L.A. and New York. The San Francisco events proved to be an effective, grassroots marketing campaign that built brand loyalty by connecting with the customer on a .more personal, intimate, and indie scale.</p>
-				</div>
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
 
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img src="img/artists4.png" class="lightbox-target"></a>
+				<h1 class="slide-title">Proving Grounds: Jambox LiveAudio Series</h1>
 
-					<h1 class="slide-title">CaseCase Study: "Nas' Illmatic XX: Looking back with Kendrick Lamar, Schoolboy Q, Tech N9ne" (Explicit)</h1>
-					
-					<p style="font-size:20px; text-align:center;">Client: Google Play</p>
-					<p>Project: BAMM.tv was contracted to work as both Director or Photography and Recording Engineer for this 20-year retrospective on what many consider the greatest Hip Hop album of all-time - Nas' <span style="font-style: italic;">Illmatic</span></p>
-				</div>
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-jambox.jpg" class="lightbox-target"></a>
 
-				<!--Etc..-->
+
+				<p><strong>Client:</strong> Jambox</p>
+				<p><strong>Project:</strong> BAMM.tv worked with product managers of LiveAudio, which is a key component to the fleet of Jambox speakers. BAMM.tv successfully pitched and produced Proving Grounds, an exclusive series introducing indie artists to a much wider audience. The program also educated the public about binaural recording practices. Content shot was then used in promotional materials throughout Jambox marketing campaigns. Jawbone also licensed one of the songs to use in marketing and promotional campaigns Lastly, our team produced an &quot;About LiveAudio&quot; short for the company. This content proved to be a versatile music marketing asset across multiple Jambox platforms (web, mobile, newsletters, and more).</p>
+				<section class="library-featured">
+					<!-- <p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 3</a></li>
+					</ol> -->
+				</section>
+			</div>
+
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
+
+				<h1 class="slide-title">Audyssey</h1>
+
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-geographer.jpg" class="lightbox-target"></a>
+
+				<p><strong>Client:</strong> Audyssey</p>
+				<p><strong>Project;</strong> BAMM.tv teamed up with Audyssey and San Francisco music staple Noise Pop (Treasure Island Music Festival, Noise Pop) to put on a series of pop-up concerts througout San Francisco. BAMM.tv was responsible for curating the artists, location, set-design, production, and post-production. Audyssey then incorporated the content into a larger, multi-city series of pop-up shows called The Neighborhood.tv Sessions, coordinating with similar events in L.A. and New York. The San Francisco events proved to be an effective, grassroots marketing campaign that built brand loyalty by connecting with the customer on a .more personal, intimate, and indie scale.</p>
+				<section class="library-featured">
+					<p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+					</ol>
+				</section>
+			</div>
+
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
+
+				<h1 class="slide-title">Nas Illmatic XX: Looking back with Kendrick Lamar, Schoolboy Q, Tech N9ne"</h1>
+
+				<a data-featherlight="#video" class="lightbox-targetlink" href="#"><img class="slide-heading-img" src="img/thumbnail-nas.jpg" class="lightbox-target"></a>
+
+				<p><strong>Client:</strong> Google Play</p>
+				<p><strong>Project:</strong> BAMM.tv was contracted to work as both Director or Photography and Recording Engineer for this 20-year retrospective on what many consider the greatest Hip Hop album of all-time - Nas' <span style="font-style: italic;">Illmatic</span></p>
+				<section class="library-featured">
+					<p><strong>Featured Videos</strong></p>
+					<ol>
+						<li><a data-featherlight="#video" href="#">Sample 1</a></li>
+						<li><a data-featherlight="#video" href="#">Sample 2</a></li>
+					</ol>
+				</section>
+			</div>
+
+			<!--Etc..-->
 		</div>
 
 	</div> <!-- end of right section -->
@@ -426,40 +598,51 @@
 <div class="dual-pane-section row" id="about-section">
 	<div class="col col-left">
 		<img src="img/about-title.png">
-		<div class="contact-us">
-			<h2>Contact BAMM.tv for:</h2>
-			<ul>
-				<li><a href="mailto:info@bamm.tv" class="contact-btn business-btn"><span class="contact-b contact-img"></span>Business</a></li>
-				<li><a href="mailto:info@bamm.tv" class="contact-btn artists-btn"><span class="contact-a contact-img"></span>Artists</a></li>
-			</ul>
-		</div>
 		<!-- <h1>Vision</h1>
 		<p>We fascilitate increased brand loyalty through original music content. In doing so, we introduce better music content to a larger audience, and that's what drives us.</p> -->
 	</div>
-	<div class="col col-middle" id="about-mid"><h1><a href="#about-mid">Learn more about us</a></h1></div>
+
+
+	<div class="col col-middle" id="about-mid">
+		<div class="col-title">
+			<h1>About Us</h1>
+			<p class="italic">Here's a little more about who we are and what makes us tick. Let's figure out how to work together.</p>
+		</div>
+		<a href="#about-mid">Learn more<!-- about our technology --></a>
+	</div>
+
+
 	<div class="col col-right">
 		<span class="stroke stroke-e"></span>
 
 		<div class="swiper-container about-slider">
-				<!--First Slide-->
-				<div class="swiper-slide"> 
-					<img src="img/logo-medium.png">
-					<p>BAMM.tv is comprised of a team of business-minded musicians, video producers, audio engineers, artists and seasoned entrepreneurs with one goal in mind: to create a new music economy that is fair and profitable for all stakeholders. We have witnessed the decline of the old way of doing business over the last decade and worked in collaboration with hundreds of talented musicians to develop a sane, sustainable approach.</p>
-				</div>
+			<!--First Slide-->
+			<div class="swiper-slide"> 
+				<img src="img/logo-medium.png">
+				<p>BAMM.tv is comprised of a team of business-minded musicians, video producers, audio engineers, artists and seasoned entrepreneurs with one goal in mind: to create a new music economy that is fair and profitable for all stakeholders. We have witnessed the decline of the old way of doing business over the last decade and worked in collaboration with hundreds of talented musicians to develop a sane, sustainable approach.</p>
+				<span class="contact-us">
+					<h2>Contact BAMM.tv for:</h2>
+					<ul>
+						<li><a href="mailto:info@bamm.tv" class="contact-btn business-btn"><span class="contact-b contact-img"></span>Business</a></li>
+						<li><a href="mailto:info@bamm.tv" class="contact-btn artists-btn"><span class="contact-a contact-img"></span>Artists</a></li>
+					</ul>
+				</span>
+			</div>
 
-				<!--Second Slide-->
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Our Story</h1>
-					<p>Like a lot of startups, BAMM.tv got its humble beginnings in a garage. But for us it wasn't just a place to write code and talk about business models. We opened our space for musicians to record and rehearse as we developed a workflow for producing broadcast-quality music videos on the cheap. With the proof of concept under our belt, we moved to a private venue in San Francisco's warehouse district and opened offices in London and Amsterdam. Over the years, we have recorded hundreds of artists in our in-house studio and at venues around the world.</p>
-				</div>
+			<!--Second Slide-->
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">Where we are </h1>
+				<p>(SF, London, Amsterdam) CGH: Perhaps this can be a map with dots indicating places where we've produced content (SF, LA, Austin, Phoenix, New York, London, Amsterdam....maybe some speculative dots like Mexico City, Bogota, Buenos Aires). With the text: "Today, BAMM.tv creates original content for our partners in territories around the world in order to capture localized content that is of particular interest to their customers.</p>
+			</div>
 
-				<!--Third Slide-->
-				<div class="swiper-slide"> 
-					<h1 class="slide-title">Where we are </h1>
-					<p>(SF, London, Amsterdam) CGH: Perhaps this can be a map with dots indicating places where we've produced content (SF, LA, Austin, Phoenix, New York, London, Amsterdam....maybe some speculative dots like Mexico City, Bogota, Buenos Aires). With the text: "Today, BAMM.tv creates original content for our partners in territories around the world in order to capture localized content that is of particular interest to their customers.</p>
-				</div>
+			<!--Third Slide-->
+			<div class="swiper-slide"> 
+				<h1 class="slide-title">Our Story</h1>
+				<p>Like a lot of startups, BAMM.tv got its humble beginnings in a garage. But for us it wasn't just a place to write code and talk about business models. We opened our space for musicians to record and rehearse as we developed a workflow for producing broadcast-quality music videos on the cheap. With the proof of concept under our belt, we moved to a private venue in San Francisco's warehouse district and opened offices in London and Amsterdam. Over the years, we have recorded hundreds of artists in our in-house studio and at venues around the world.</p>
+			</div>
 
-				<!--Etc..-->
+
+			<!--Etc..-->
 		</div>
 
 	</div> <!-- end of right section -->
@@ -470,7 +653,7 @@
 <footer id="footer">
 	<img src="img/logo-medium.png">
 	<ul class="footer-links">
-		<li><a href="#problem-section">The Problems</a></li>
+		<li><a href="#problem-section">The Problem</a></li>
 		<li><a href="#solution-page">Our Solution</a></li>
 		<li><a href="#technology-section">Technology</a></li>
 		<li><a href="#artists-section">Artists</a></li>
@@ -479,18 +662,23 @@
 		<li><a href="#about-section">About Us</a></li>
 	</ul>
 	<ul class="social-links">
-		<li><span class="btn-youtube"><img src="img/youtube.svg" class="svg"></span><a href="#">Youtube</a></li>
-		<li><span class="btn-vimeo"><img src="img/vimeo.svg" class="svg"></span><a href="#">Vimeo</a></li>
-		<li><span class="btn-fb"><img src="img/fb.svg" class="svg"></span><a href="#">Facebook</a></li>
-		<li><span class="btn-twitter"><img src="img/twitter.svg" class="svg"></span><a href="#">Twitter</a></li> </ul>
+		<li><span class="btn-youtube"><img src="img/youtube.svg" class="svg"></span><a href="https://www.youtube.com/user/BAMMTV">Youtube</a></li>
+		<li><span class="btn-vimeo"><img src="img/vimeo.svg" class="svg"></span><a href="https://vimeo.com/bammtv">Vimeo</a></li>
+		<li><span class="btn-fb"><img src="img/fb.svg" class="svg"></span><a href="https://www.facebook.com/bammtv">Facebook</a></li>
+		<li><span class="btn-twitter"><img src="img/twitter.svg" class="svg"></span><a href="https://twitter.com/bammtv">Twitter</a></li> </ul>
 
 	</footer>
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- "LIGHTBOX VIDEO" -->
+<iframe class="lightbox" src="http://player.vimeo.com/video/100126080" width="600" height="337" id="video" style="border:none;" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
-				
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/velocity.min.js"></script>
+
 	<!--<script src="js/swiper.js"></script>-->
 	<script src="js/featherlight.js"></script>
 	<script src="js/wuj.js"></script>

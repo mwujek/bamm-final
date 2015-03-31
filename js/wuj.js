@@ -15,15 +15,15 @@ function centerArrow(){
 
 //collapse left column for mobile view
 function collapseContent(){
-	jQuery('.col-right').each(function(){
-		$(this).slideUp(0);
-	});
-}
+	jQuery('div.col-right').each(function(){
+		// slide Up
+		$(this).velocity({ height: 0, opacity: 0 },{duration: 0, easing : "easeInSine", visibility: "hidden"}); }); }
 
 //vertically/horz align design elements on home page and left columns (sections)
 function alignElements(){
 	// home page
 	var $relativeContent = $(".relative-placement");
+
 	$relativeContent.each(function() { 
 		var el=$(this);
 		var parent = el.parents('.full-section');
@@ -114,107 +114,221 @@ function scaleVideo(){
 
     var scaledVideoHeight = scale*videoNativeHeight;
     var scaledVideoWidth = scale*videoNativeWidth;
-
+    console.log("videoWidth: " +  scaledVideoWidth + " videoHeight: " + scaledVideoHeight);
     video.height(scaledVideoHeight);
     video.width(scaledVideoWidth);
 }
 
 
-function slideToggle(){
-	$( '#solution-expanded' ).slideToggle(666);
+
+$(document).ready(function(){
+
+	// center arrow animation on home page
+	centerArrow();
+	// add event for arrow...if someone clicks it, the page scrolls down to the problem section
+	$('.down-arrow').click(function() {
+		$('#problem-section').velocity("scroll", { duration: 300 });
+	});
+	// add image change list
+	// var list = '<ul class="image-selection"> <li index="1">1</li> <li index="2">2</li><li index="og">OG</li></ul>';
+	// $('.col-left').each(function() {
+	// 	$(this).append(list);
+	// 	var img = $(this);
+	// 	var imgSrc =  img.css('background-image').toString();
+	// 	$(this).find('.image-selection li').click(function() {
+	// 		var target = $(this).attr('index');
+	// 		var newSrc;
+	// 		if (target === 'og'){
+	// 			newSrc = imgSrc;
+	// 			//console.log('OG');
+	// 			img.css('background', newSrc);
+	// 		} else{
+	// 		newSrc = imgSrc.replace(".jpg)", "");
+	// 		newSrc = newSrc.replace(newSrc, newSrc + target + ".jpg)");
+	// 		img.css('background', newSrc);
+	// 		}
+
+	// 	});
+	// });
+
+
+
+	// alignment for titles
+	if(viewportWidth<queryWidth){
+		$('.col-title').each(function(){
+			var height = $(this).outerHeight();
+			$(this).css('top', (-1) * height + 'px');
+		});
+	}
+	// waypoints
+
+	if(viewportWidth>queryWidth){
+
+		$('.col-left > img').each(function(){
+			var $el = $(this);
+			$el.css({
+				'opacity':0,
+				'visibility':'hidden'
+			});
+			var waypoint = new Waypoint({
+				element: $(this),
+				offset: '45%',
+				handler: function() {
+			    	$el.velocity({
+			    		opacity: 1,
+			    		top: [-60, [1,1]]
+			    	},{
+			    		delay : 300,
+			    		visibility: "visible"
+			    	}
+
+			    	);
+			    	//console.log('meow');
+			    	// disable after one iteration
+			    	waypoint.disable();
+			  	}
+			});
+		});
+	}
+
+
+	// lightbox
+	
+	if (viewportWidth>queryWidth){
+
+
+
+	var configuration;// = $.featherlight.defaults;
+	var mediaID = ["http://player.vimeo.com/video/100126080","http://player.vimeo.com/video/115010854","http://player.vimeo.com/video/112964858"];
+	$('.lightbox-targetlink').each(function(key){
+		//	console.log(key);
+		console.log(key % 3);
+		// 0,1,2
+		if (key % 3 === 1){
+			$.featherlight.defaults.artistName = "Artist 3";
+			$.featherlight.defaults.artistInfo = "Artists 1 Info here...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+			configuration = $.featherlight.defaults;
+			$(this).featherlight($('#video'), configuration);
+
+		} else if (key % 3 === 2){
+
+			$.featherlight.defaults.artistName = "Artists 1";
+			$.featherlight.defaults.artistInfo = "Artists 1 Info here...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+			configuration = $.featherlight.defaults;
+			$(this).featherlight($('#video'), configuration);
+		} else {
+
+			$.featherlight.defaults.artistName = "Artists 2";
+			$.featherlight.defaults.artistInfo = "Artists 2 Info here...Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+			configuration = $.featherlight.defaults;
+			$(this).featherlight($('#video'), configuration);
+		}
+		$(this).click(function() {
+		if (key % 3 === 1){
+			$('#video').attr('src',mediaID[0]);
+		} else if (key % 3 === 2){
+			$('#video').attr('src',mediaID[1]);
+		} else {
+			$('#video').attr('src',mediaID[2]);
+		}
+		});
+	});
+} else {
+	$('a.lightbox-targetlink').each(function(){
+		$(this).click(function(event) {
+			event.preventDefault();
+		});
+	});
 }
 
 
-$(document).ready(function(){
-	// slide solution section
-	var heightDiff;
-	var navHeight;
-	// center arrow animation on home page
-	centerArrow();
-	
-	// lightbox
-	$.featherlight.defaults.artistName = "We Became Owls";
-	$.featherlight.defaults.artistInfo = "We Became Owls is an Alternative Americana band from Oakland, CA. Songwriter Andrew Blair and multi-instrumentalist Ross Warner began creating, writing, and composing music together in middle school. Influenced by the sound of Greenwich Village in the 60's, the Texas of Van Zandt and Earl, and more contemporary acts like Wilco, Damien Jurado, Drive by Truckers, and Jeff Buckley, We Became Owls recalls a sound heard in the jukes, front porches, barns, and hillsides of a long forgotten era.";
-	jQuery('img.svg').each(function(){
-		var configuration = $.featherlight.defaults;
-		$('.lightbox-targetlink').featherlight($('#video'), configuration);
-	});
 
 	// click to expand / collapse solution list...music licensing, tech, biz models, diff
-	$( '#solution-expanded' ).slideUp( 0 );
-	// get heighdiff for scrolling?
-	// considering canning this *********
-	setTimeout(function(){
-		heightDiff = $('#technology-section').offset().top;
-		console.log("heightDiff: " + heightDiff);
-		return heightDiff;
-	},100);
-
 	var $expandSection = $('#solution-expanded');
+	// slideUp on load
+	var expandedH = $expandSection.innerHeight();
+	$expandSection.velocity({height: 0},{duration: 0, easing : "easeInSine", visibility: "hidden"} );
+
+
 	$( 'a.slide-toggle-btn').click(function(e) {
 		e.preventDefault();
-		navHeight = $('.solution-list').innerHeight();
-		heightDiff -=navHeight;
 
-		$('html,body').animate({
-			scrollTop: heightDiff,
-			duration: 800,
-			complete: slideToggle(1000)
-		});
+		$('#solution-page').velocity("scroll", { duration: 400 });
 
+		$( '#solution-expanded').velocity({height: 0 },{duration: 500, delay: 600, easing : "easeInSine", visibility: "hidden"});
+		
+		//complete: slideToggle(1000)
 		$expandSection.toggleClass('section-active');
 	});
 
-		$('.solution-list a').click(function(e){
-			e.preventDefault();
-			var redirect = $(this).attr('href');
+	$('.solution-list a').click(function(e){
+		e.preventDefault();
+		var redirect = $(this).attr('href');
 
-			if ($expandSection.hasClass('section-active')){
-				 //$( '#solution-expanded' ).slideToggle( 300 );
-				 // console.log('go up');
-				 //$expandSection.toggleClass('section-active');
-				 // $('html,body').animate({
-					// 	scrollTop: $(redirect).offset().top
-					// }, 1000);
-			} else{
-				$( '#solution-expanded' ).slideToggle( 800 );
-				console.log('go down');
-				$('html,body').animate({
-						scrollTop: heightDiff
-					}, 1000);
-				$expandSection.toggleClass('section-active');
-			}
-		});
+		if ($expandSection.hasClass('section-active')){
+			 //console.log('already active');
+		} else{
+			$( '#solution-expanded' ).velocity(
+				{height: expandedH},
+				{
+					duration: 800,
+					easing : "easeInSine",
+					visibility: "visible",
+					complete: function() {
+						$(redirect).velocity("scroll", { duration: 800 });
+						$expandSection.toggleClass('section-active');
+					}
+				});
 
-		$('div.hidden-solution').click(function(){
-			 $( '#solution-expanded' ).slideToggle( 'slow' );
-			 $expandSection.toggleClass('section-active');
-		});
+		}
+	});
+
+	$('div.hidden-solution').click(function(){
+		 $( '#solution-expanded' ).velocity(
+				{height: expandedH, opacity: 1},
+				{
+					duration: 800,
+					visibility: "visible",
+					complete: function() {
+						$expandSection.toggleClass('section-active');
+					}
+				});
+	});
 
 
-// 	// swiper calls
-
-	
 
 // new swiper with Slick
-	$('.swiper-container').each(function(key){
-		console.log(key);
+	$('.swiper-container').each(function(){
 		$( this ).slick({
 			arrows: false,
 			dots: true,
 			infinite: false
-			// mobileFirst: true
-			// centerMode: true
 		});
-		// $(this).click(function(){
-		// 	$(this).slick('slickNext');
-		// });
+	});
+
+
+
+	$('.quotes-artists').slick({
+		arrows: true,
+		prevArrow: '<img class="quote-arrow prev-arrow" src="img/left-arrow.png" style="inline-block">',
+		nextArrow: '<img class="quote-arrow next-arrow" src="img/right-arrow.png" style="inline-block">',
+		dots: false,
+		infinite: true,
+		draggable: true,
+		autoplay: true,
+  		autoplaySpeed: 6000,
+  		adaptiveHeight: true
 	});
 	$('a.library-genre-link').click(function(e) {
 		e.preventDefault();
 		var linkTarget = $(this).attr('index');
-		console.log(linkTarget);
 		$('#library-section').find('.swiper-container').slick('slickGoTo', linkTarget);
+	});
+
+	$('a.slider-link').click(function(e) {
+		e.preventDefault();
+		var linkTarget = $(this).attr('href');
+		$('#artists-section').find('.swiper-container').slick('slickGoTo', linkTarget);
 	});
 
 	// adjustments: replace img.svg w inline SVG && align section witdth/heights
@@ -235,27 +349,24 @@ $(document).ready(function(){
 
 	//video
 		var $videoLayer = $('#video-placement');
-
 		if(viewportWidth>queryWidth){
-			$videoLayer.prepend('<video id="bg-video" loop src="http://f.cl.ly/items/0o0s2Y340a221x2g3q2z/intro.mp4" autoplay muted></video>');
+			console.log('play video');
+			$videoLayer.prepend('<video id="bg-video" loop autoplay muted></video>');
+			$videoLayer.find('video').prepend('<source src="video/bgVideo-converted.mp4" type="video/mp4">');
 		}
 
-
-
-		
 		var video = $('#bg-video');
 		var bg = $('#video-placement');
 
-		if(viewportHeight>queryWidth){
+		if(viewportWidth>queryWidth){
 
 			video.on('loadedmetadata', scaleVideo);
 			$(window).on('resize', scaleVideo);
 
 		} else {
-			video.attr({
-				src: "",
-				alt: "jQuery"
-			});
+			// video.attr({
+			// 	alt: "jQuery"
+			// });
 			bg.addClass('background-image');
 		}
 
@@ -274,54 +385,66 @@ $(document).ready(function(){
 
 
 
+	if (viewportWidth > queryWidth){
+		setInterval(function() {
+			if(start){
+				xPos = rules.startingXpos;
+				start = false;
+			}
+			xPos -= 500;
 
-	setInterval(function() {
-
-		if(start){
-			xPos = rules.startingXpos;
-			start = false;
-	    //console.log("START");
+			if(xPos === rules.stopAt){
+				xPos = rules.resetAt;
+			}
+			$item.css({
+				'background-position':xPos+'px ' +rules.vertical
+			});
+		}, 100);
 	}
-	xPos -= 500;
 
-	if(xPos === rules.stopAt){
-		xPos = rules.resetAt;
-	}
-	$item.css({
-		'background-position':xPos+'px ' +rules.vertical
-	});
-	  //console.log(xPos + " " + rules.vertical);
-	}, 100);
 
 
 	var problemText = [
 		{
 		title : "The Vision",
-		description: "You have an idea of how to enhance your services and build stronger customer relationships through music. It should be easy to find perfectly reasonable business partners that are interested in making a deal, but it's not."},
+		description: "You have an idea of how to enhance your services and build stronger customer relationships through music. It should be easy to find perfectly reasonable business partners interested in making a deal, but it’s not."},
 		{
 		title : "The Obstacles",
-		description: "The problem is sytematic. Barriers are in every step of the process. Traditional licensing and technology solutions are time consuming and expensive. You are competing with free music content. Differentiation and sound business models seem elusive at best when it comes to music licesning and content delivery."},
+		description: "Barriers await at every step of the process. Traditional music licensing models are one road block after another. Technology solutions are time consuming and cost-prohibitive. Even if you are able to create a business model that’s cash flow positive, at the end of the line practically all of the content is already available for free."},
 		{
 		title : "Our Solution",
-		description: "Instead of searching for ways around the old barriers, BAMM.tv built a new road (I hate this line, btw). All of our content is under a license that makes sense to both the artist and brand. We build content delivery solutions that reflect how and where music is consumed. Finally, by producing all of the content, we've curated a library of one-of-a kind content."}
+		description: "BAMM.tv removes the barriers with a straightforward approach to licensing and distributing original music programming that provides major networks and carriers with the opportunity to dramatically transform their customer relationships. We provide a deep library of curated, one-of-a-kind content that can be made to order for your specific needs. By streamlining the process and leveraging the latest technology, BAMM.tv offers a music business model that is powerful, exciting, and logical."}
 		];
 
 		function changeProblemContent(name){
 			var $title = $('.problem-title');
 			var $description = $('.problem-description');
+			// mobile animation
+			var $animation = $('.mobile-animation');
+			var $copy = $('.problem-copy');
+			// targets for content swapping
 			var index;
-			if (name === "Vision"){index = 0;}
-			if (name === "Obstacles"){index = 1;}
-			if (name === "Solution"){index = 2;}
+			var imageSrc;
+			if (name === "Vision"){index = 0; imageSrc = "img/b2b-animation-a.gif";}
+			if (name === "Obstacles"){index = 1; imageSrc = "img/b2b-animation-b.gif";}
+			if (name === "Solution"){index = 2; imageSrc = "img/b2b-animation-c.gif";}
 			$title.css('opacity',0);
 			$description.css('opacity',0);
+			$animation.css('opacity',0);
+			//$copy.velocity({ height: 100 },{duration: 300, easing : "easeInSine"}); 
 			setTimeout(function(){
+
 				$title.text(problemText[index].title);
 				$description.text(problemText[index].description);
+				$animation.attr('src', imageSrc);
+				var newHeight = $description.innerHeight();
+				console.log(newHeight);
+				$copy.velocity({ height: newHeight + 30},{duration: 300, easing : "easeInSine"}); 
 			},500);
 			setTimeout(function(){
 				$title.css('opacity',1);
 				$description.css('opacity',1);
+				$animation.css('opacity',1);
 			},800);
 		}
 
@@ -340,10 +463,10 @@ $(document).ready(function(){
 		$third = $('.third');
 
 
-		$('.problem-list a').on('click',function(){
+		$('.problem-list a').click(function(){
 			var $el = $(this);
 			if ($el.hasClass('active-problem-link')){
-				console.log('already active');
+				////console.log('already active');
 			} else{
 				$el.parents('.problem-list').find('.active-problem-link').removeClass('active-problem-link');
 				$el.addClass('active-problem-link');
@@ -354,72 +477,140 @@ $(document).ready(function(){
 			return start;
 		});
 
-		$first.on('click',function(){
-			rules = {
-				startingXpos: 0,
-				resetAt: 0,
-				stopAt: -2000,
-				vertical: 'top'
-			};
-		  //changeProblemContent();
-		  return rules;
+		if (viewportWidth > queryWidth){
 
-		});
-		$second.on('click',function(){
-			rules = {
-				startingXpos: -2000,
-				resetAt: -4000,
-				stopAt: -5500,
-				vertical: 'top'
-			};
+			$first.on('click',function(){
+				rules = {
+					startingXpos: 0,
+					resetAt: 0,
+					stopAt: -2000,
+					vertical: 'top'
+				};
+			  return rules;
+			});
+			$second.click(function(){
+				rules = {
+					startingXpos: -2000,
+					resetAt: -4000,
+					stopAt: -5500,
+					vertical: 'top'
+				};
+				return rules;
+			});
 
-			return rules;
-		});
+			$third.click(function(){
+				rules = {
+					startingXpos: 0,
+					resetAt: -9000,
+					stopAt: -12500,
+					vertical: 'bottom'
+				};
+				return rules;
+			});
+		//mobile version
+		} else {
+			// $first.on('click',function(){
+			// 	rules = {
+			// 		startingXpos: 0,
+			// 		resetAt: 0,
+			// 		stopAt: -2000,
+			// 		vertical: 'top'
+			// 	};
+			//   return rules;
+			// });
+			// $second.click(function(){
+			// 	rules = {
+			// 		startingXpos: -2000,
+			// 		resetAt: -4000,
+			// 		stopAt: -5500,
+			// 		vertical: 'top'
+			// 	};
+			// 	return rules;
+			// });
 
-		$third.on('click',function(){
-
-			rules = {
-				startingXpos: 0,
-				resetAt: -9000,
-				stopAt: -12500,
-				vertical: 'bottom'
-			};
-
-			return rules;
-
-		});
+			// $third.click(function(){
+			// 	rules = {
+			// 		startingXpos: 0,
+			// 		resetAt: -9000,
+			// 		stopAt: -12500,
+			// 		vertical: 'bottom'
+			// 	};
+			// 	return rules;
+			// });
+		}
 
 
 
 	// slide toggle for mobile sections
 	if(viewportWidth < queryWidth){
-		console.log('collapse');
 		collapseContent();
-		console.log('collapse');
 	}
-	var textArray= [];
+	//var textArray= [];
 	$('.col-middle').each(function(key){
 		var $link = $(this).find('a');
-		textArray.push( $(this).text() );
+		$link.parents('.col-middle').append('<span class="instruction-middle">Tap again to collapse</span>');
+		var $direction = $link.parents('.col-middle').find('.instruction-middle');
+		$direction.css('visibility', 'hidden');
 			$link.click(function() {
-				var originalText = ( textArray[key] );
-				var collapseText = originalText + " (tap again to collaspe)";
-				var $content = $(this).parents('.row').find('.col-right');
+				//var originalText = ( textArray[key] );
+				//var collapseText = originalText + " (tap again to collaspe)";
+				var $content = $(this).parents('.row').find('div.col-right');
 
 				$content.toggleClass('mobile-expanded');
 
 				if ( $content.hasClass('mobile-expanded') ){
-					$content.slideToggle(1200);
-					$(this).text(collapseText);
+					// expanding content
+					$link.toggleClass('active-middle-link');
+
+
+					$content.velocity({
+			    		height: viewportHeight,
+			    		opacity: 1
+			    	},{
+			    		duration: 800,
+			    		visibility: "visible"
+			    	}
+			    	);
+
+			    	$direction.velocity({
+			    		"margin-top": "20px",
+			    		"opacity" : 1
+			    	},{
+			    		duration: 400,
+			    		visibility: "visible"
+			    	}
+			    	);
+			    	console.log( $content.find('div.slick-list'));
+			    	$content.find('div.slick-list').css('width', function(){
+			    		$(this).css('height', (viewportHeight - 40 )+ 'px');
+			    	});
+
 				} else {
-					$content.slideToggle(300);
-					$(this).text(originalText);
+					// collapsing content
+					//$(this).text(originalText);
+					$link.toggleClass('active-middle-link');
+					$content.velocity({
+			    		height: 0,
+			    		opacity: 0
+			    	},{
+			    		duration: 300,
+			    		visibility: "hidden"
+			    	}
+			    	);
+
+			    	$direction.velocity({
+			    		"margin-top": "0px",
+			    		"opacity" : 0
+			    	},{
+			    		duration: 200,
+			    		easing : "easeInSine",
+			    		visibility: "hidden"
+			    	}
+			    	);
+
 				}
 			});
-});
-
-
-
+	});
 }); // end of ready function
 
 
@@ -429,7 +620,7 @@ $( window ).resize(function() {
      viewportWidth = $(window).width();
 
 	if (viewportWidth< queryWidth){
-		console.log('collapse');
+		////console.log('collapse');
 		collapseContent();
 	}
 	alignElements();
@@ -443,22 +634,15 @@ $( window ).resize(function() {
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
 
-			
-
-			
-
 			if ($(this).attr('href') === '#footer'){
-				console.log('yeah');
+				//console.log('yeah');
 			} else {
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 				if (target.length) {
-					$('html,body').animate({
-						scrollTop: target.offset().top
-					}, 1000);
+					target.velocity("scroll", { duration: 1000 });
 					return false;
 				}
 			}
 		}
-			
 	});
