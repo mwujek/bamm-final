@@ -172,7 +172,7 @@ $(document).ready(function(){
 			});
 			var waypoint = new Waypoint({
 				element: $(this),
-				offset: '45%',
+				offset: '60%',
 				handler: function() {
 			    	$el.velocity({
 			    		opacity: 1,
@@ -243,59 +243,6 @@ $(document).ready(function(){
 
 
 
-	// click to expand / collapse solution list...music licensing, tech, biz models, diff
-	var $expandSection = $('#solution-expanded');
-	// slideUp on load
-	//var expandedH = $expandSection.innerHeight();
-	//$expandSection.velocity({height: 0},{duration: 0, easing : "easeInSine", visibility: "hidden"} );
-
-
-	$( 'a.slide-toggle-btn').click(function(e) {
-		e.preventDefault();
-
-		$('#solution-page').velocity("scroll", { duration: 400 });
-
-		$( '#solution-expanded').velocity({height: 0 },{duration: 500, delay: 600, easing : "easeInSine", visibility: "hidden"});
-		
-		//complete: slideToggle(1000)
-		$expandSection.toggleClass('section-active');
-	});
-
-	// $('.solution-list a').click(function(e){
-	// 	e.preventDefault();
-	// 	var redirect = $(this).attr('href');
-
-	// 	if ($expandSection.hasClass('section-active')){
-	// 		 //console.log('already active');
-	// 	} else{
-	// 		$( '#solution-expanded' ).velocity(
-	// 			{height: expandedH},
-	// 			{
-	// 				duration: 800,
-	// 				easing : "easeInSine",
-	// 				visibility: "visible",
-	// 				complete: function() {
-	// 					$(redirect).velocity("scroll", { duration: 800 });
-	// 					$expandSection.toggleClass('section-active');
-	// 				}
-	// 			});
-
-	// 	}
-	// });
-
-	// $('div.hidden-solution').click(function(){
-	// 	 $( '#solution-expanded' ).velocity(
-	// 			{height: expandedH, opacity: 1},
-	// 			{
-	// 				duration: 800,
-	// 				visibility: "visible",
-	// 				complete: function() {
-	// 					$expandSection.toggleClass('section-active');
-	// 				}
-	// 			});
-	// });
-
-
 
 // new swiper with Slick
 	$('.swiper-container').each(function(){
@@ -306,29 +253,10 @@ $(document).ready(function(){
 		});
 	});
 
-
-
-	$('.quotes-artists').slick({
-		arrows: true,
-		prevArrow: '<img class="quote-arrow prev-arrow" src="img/left-arrow.png" style="inline-block">',
-		nextArrow: '<img class="quote-arrow next-arrow" src="img/right-arrow.png" style="inline-block">',
-		dots: false,
-		infinite: true,
-		draggable: true,
-		autoplay: true,
-  		autoplaySpeed: 6000,
-  		adaptiveHeight: true
-	});
 	$('a.library-genre-link').click(function(e) {
 		e.preventDefault();
 		var linkTarget = $(this).attr('index');
 		$('#library-section').find('.swiper-container').slick('slickGoTo', linkTarget);
-	});
-
-	$('a.slider-link').click(function(e) {
-		e.preventDefault();
-		var linkTarget = $(this).attr('href');
-		$('#artists-section').find('.swiper-container').slick('slickGoTo', linkTarget);
 	});
 
 	// adjustments: replace img.svg w inline SVG && align section witdth/heights

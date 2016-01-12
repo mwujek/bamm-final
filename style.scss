@@ -111,7 +111,7 @@ nav{
 	left:0px;
 	width: 100%;
 	height: 70px;
-	z-index: 100000;
+	z-index: 100000000;
 
 	.menu-btn{
 		position: absolute;
@@ -213,6 +213,7 @@ nav{
 	h1, h2{
 		text-align: center;
 		color: #fff;
+		text-shadow: 0px 0px 10px black;
 	}
 	h1{font-size: 44px;}
 	h2{font-size: 28px; letter-spacing: 1px; }
@@ -600,10 +601,10 @@ nav{
 		p{
 			text-align: left;
 			//text-indent: 40px;
-			font-size: $body-font-size;
-			line-height: $body-lh;
+			font-size: $body-font-size + 1;
+			line-height: $body-lh + 1;
 			margin-top: 10px;
-			padding: 0 40px;
+			padding: 0 20px;
 		}
 		img{
 			max-width: 400px;
@@ -1310,6 +1311,8 @@ $mobile-heading-lg: 40px;
 
 .solution-expanded-content{
 	overflow-y: hidden;
+	padding-top: 0px !important;
+	padding-bottom: 20px !important;
 	.col{
 		padding: 0;
 	}
@@ -1319,9 +1322,9 @@ $mobile-heading-lg: 40px;
 	}
 	p{
 		box-sizing: border-box;
-		font-size: 12px; //$mobile-body-sm;
-		line-height: $mobile-body-sm-lh;
-		padding: 0px 10px;
+		font-size: 12px !important; //$mobile-body-sm;
+		line-height: $mobile-body-sm-lh !important;
+		padding: 0px 10px !important;
 	}
 
 }
@@ -1338,9 +1341,6 @@ $mobile-heading-lg: 40px;
 	padding: 0px 10px;
 }
 
-.solution-expanded-content{
-	padding-bottom: 0px !important; 
-}
 
 
 
@@ -1987,6 +1987,9 @@ $about-btn-active: #FB8823;
 section.text-container.solution-expanded-content.row{
 	padding-top: 40px;
 	padding-bottom: 80px;
+	p{
+		font-size: 16px;
+	}
 }
 
 
