@@ -176,7 +176,7 @@ $(document).ready(function(){
 				handler: function() {
 			    	$el.velocity({
 			    		opacity: 1,
-			    		top: [-60, [1,1]]
+			    		top: [-10, [1,1]]
 			    	},{
 			    		delay : 300,
 			    		visibility: "visible"
@@ -246,8 +246,8 @@ $(document).ready(function(){
 	// click to expand / collapse solution list...music licensing, tech, biz models, diff
 	var $expandSection = $('#solution-expanded');
 	// slideUp on load
-	var expandedH = $expandSection.innerHeight();
-	$expandSection.velocity({height: 0},{duration: 0, easing : "easeInSine", visibility: "hidden"} );
+	//var expandedH = $expandSection.innerHeight();
+	//$expandSection.velocity({height: 0},{duration: 0, easing : "easeInSine", visibility: "hidden"} );
 
 
 	$( 'a.slide-toggle-btn').click(function(e) {
@@ -261,39 +261,39 @@ $(document).ready(function(){
 		$expandSection.toggleClass('section-active');
 	});
 
-	$('.solution-list a').click(function(e){
-		e.preventDefault();
-		var redirect = $(this).attr('href');
+	// $('.solution-list a').click(function(e){
+	// 	e.preventDefault();
+	// 	var redirect = $(this).attr('href');
 
-		if ($expandSection.hasClass('section-active')){
-			 //console.log('already active');
-		} else{
-			$( '#solution-expanded' ).velocity(
-				{height: expandedH},
-				{
-					duration: 800,
-					easing : "easeInSine",
-					visibility: "visible",
-					complete: function() {
-						$(redirect).velocity("scroll", { duration: 800 });
-						$expandSection.toggleClass('section-active');
-					}
-				});
+	// 	if ($expandSection.hasClass('section-active')){
+	// 		 //console.log('already active');
+	// 	} else{
+	// 		$( '#solution-expanded' ).velocity(
+	// 			{height: expandedH},
+	// 			{
+	// 				duration: 800,
+	// 				easing : "easeInSine",
+	// 				visibility: "visible",
+	// 				complete: function() {
+	// 					$(redirect).velocity("scroll", { duration: 800 });
+	// 					$expandSection.toggleClass('section-active');
+	// 				}
+	// 			});
 
-		}
-	});
+	// 	}
+	// });
 
-	$('div.hidden-solution').click(function(){
-		 $( '#solution-expanded' ).velocity(
-				{height: expandedH, opacity: 1},
-				{
-					duration: 800,
-					visibility: "visible",
-					complete: function() {
-						$expandSection.toggleClass('section-active');
-					}
-				});
-	});
+	// $('div.hidden-solution').click(function(){
+	// 	 $( '#solution-expanded' ).velocity(
+	// 			{height: expandedH, opacity: 1},
+	// 			{
+	// 				duration: 800,
+	// 				visibility: "visible",
+	// 				complete: function() {
+	// 					$expandSection.toggleClass('section-active');
+	// 				}
+	// 			});
+	// });
 
 
 
@@ -546,7 +546,7 @@ $(document).ready(function(){
 		collapseContent();
 	}
 	//var textArray= [];
-	$('.col-middle').each(function(key){
+	$('.col-middle').each(function(){
 		var $link = $(this).find('a');
 		$link.parents('.col-middle').append('<span class="instruction-middle">Tap again to collapse</span>');
 		var $direction = $link.parents('.col-middle').find('.instruction-middle');

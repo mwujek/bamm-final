@@ -454,7 +454,7 @@ nav{
 
 .down-arrow-sketch{
 	display: block;
-	margin: 10px auto 0px auto;
+	margin: 40px auto 20px auto;
 	width: 40px;
 	background-image:url(../img/solution-down-arrow.png);
 	height: 120px;
@@ -479,7 +479,7 @@ nav{
 	//background: url(../img/pattern-2.jpg);
 	background: white;
 	position: relative;
-	z-index: 1000000;
+	//z-index: 1000000;
 }
 
 .solution-expanded-content{
@@ -650,7 +650,7 @@ nav{
 #artists-section{
 	background: #fff;
 	.col-left{
-		background: url(../img/artistsBG.jpg);
+		background: url(../img/artistsBG1.jpg);
 		background-size:cover;
 		background-position: center center;
 	}
@@ -999,12 +999,12 @@ footer{
 			}
 			a{
 				text-decoration: none;
-				color:#ccc !important;
-				border-bottom: 2px #1d1c21 solid;
+				color:#aaa !important;
+				//border-bottom: 2px #1d1c21 solid;
 				transition:0.3s all;
 				&:hover{
-					color:white;
-					border-color: white;
+					color:white !important;
+					//border-color: white;
 				}
 			}
 
@@ -1052,6 +1052,10 @@ $mobile-heading-lg: 40px;
 
 	.home-page{
 		//margin-top: 100px;
+		h1,h2{
+			color:#fff;
+			text-shadow: 0px 0px 10px black;
+		}
 		h1{
 			font-size: 36px;
 		}
@@ -1975,6 +1979,15 @@ $about-btn-active: #FB8823;
 
 // }
 
+
+// 2nd pass custom css
+
+
+// adding padding to the solution explanation
+section.text-container.solution-expanded-content.row{
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
 
 
 

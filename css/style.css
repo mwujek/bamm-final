@@ -348,7 +348,7 @@ nav {
 
 .down-arrow-sketch {
   display: block;
-  margin: 10px auto 0px auto;
+  margin: 40px auto 20px auto;
   width: 40px;
   background-image: url(../img/solution-down-arrow.png);
   height: 120px;
@@ -364,8 +364,7 @@ nav {
 
 #solution-expanded {
   background: white;
-  position: relative;
-  z-index: 1000000; }
+  position: relative; }
 
 .solution-expanded-content .col {
   padding: 0px 10px; }
@@ -500,7 +499,7 @@ nav {
 #artists-section {
   background: #fff; }
   #artists-section .col-left {
-    background: url(../img/artistsBG.jpg);
+    background: url(../img/artistsBG1.jpg);
     background-size: cover;
     background-position: center center; }
   #artists-section .col-middle {
@@ -755,12 +754,10 @@ footer {
         left: -8px; }
       footer .footer-links li a, footer .social-links li a {
         text-decoration: none;
-        color: #ccc !important;
-        border-bottom: 2px #1d1c21 solid;
+        color: #aaa !important;
         transition: 0.3s all; }
         footer .footer-links li a:hover, footer .social-links li a:hover {
-          color: white;
-          border-color: white; }
+          color: white !important; }
 
 .social-links {
   margin-top: 20px;
@@ -787,6 +784,9 @@ footer {
   .background-image {
     background-image: url(../img/aboutBG1.jpg); }
 
+  .home-page h1, .home-page h2 {
+    color: #fff;
+    text-shadow: 0px 0px 10px black; }
   .home-page h1 {
     font-size: 36px; }
   .home-page h2 {
@@ -1474,3 +1474,6 @@ button, input {
   100% {
     opacity: 0;
     bottom: 10px; } }
+section.text-container.solution-expanded-content.row {
+  padding-top: 40px;
+  padding-bottom: 80px; }

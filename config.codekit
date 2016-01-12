@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18493",
+"creatorBuild": "19102",
 "files": {
 	"\/css\/featherlight.css": {
 		"fileType": 16,
@@ -73,7 +73,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 954530,
+		"initialSize": 180054,
 		"inputAbbreviatedPath": "\/img\/aboutBG.jpg",
 		"outputAbbreviatedPath": "\/img\/aboutBG.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -95,7 +95,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3.65102e+06,
+		"initialSize": 284022,
 		"inputAbbreviatedPath": "\/img\/aboutBG2.jpg",
 		"outputAbbreviatedPath": "\/img\/aboutBG2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -117,7 +117,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 124395,
+		"initialSize": 141626,
 		"inputAbbreviatedPath": "\/img\/artists-title.png",
 		"outputAbbreviatedPath": "\/img\/artists-title.png",
 		"outputPathIsOutsideProject": 0,
@@ -216,7 +216,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.80203e+06,
+		"initialSize": 700480,
 		"inputAbbreviatedPath": "\/img\/artistsBG2.jpg",
 		"outputAbbreviatedPath": "\/img\/artistsBG2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -227,7 +227,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.41806e+06,
+		"initialSize": 716186,
 		"inputAbbreviatedPath": "\/img\/artistsBG3.jpg",
 		"outputAbbreviatedPath": "\/img\/artistsBG3.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -249,7 +249,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 55130,
+		"initialSize": 69656,
 		"inputAbbreviatedPath": "\/img\/case-logos.jpg",
 		"outputAbbreviatedPath": "\/img\/case-logos.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -260,7 +260,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 495,
+		"initialSize": 584,
 		"inputAbbreviatedPath": "\/img\/contact-a.png",
 		"outputAbbreviatedPath": "\/img\/contact-a.png",
 		"outputPathIsOutsideProject": 0,
@@ -271,7 +271,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 402,
+		"initialSize": 457,
 		"inputAbbreviatedPath": "\/img\/contact-b.png",
 		"outputAbbreviatedPath": "\/img\/contact-b.png",
 		"outputPathIsOutsideProject": 0,
@@ -282,7 +282,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 55567,
+		"initialSize": 39916,
 		"inputAbbreviatedPath": "\/img\/diagram.jpg",
 		"outputAbbreviatedPath": "\/img\/diagram.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -370,7 +370,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 472506,
+		"initialSize": 138514,
 		"inputAbbreviatedPath": "\/img\/libraryBG.jpg",
 		"outputAbbreviatedPath": "\/img\/libraryBG.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -524,7 +524,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 160062,
+		"initialSize": 159865,
 		"inputAbbreviatedPath": "\/img\/solution-collage.jpg",
 		"outputAbbreviatedPath": "\/img\/solution-collage.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -546,7 +546,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 864243,
+		"initialSize": 802268,
 		"inputAbbreviatedPath": "\/img\/solutionBG.jpg",
 		"outputAbbreviatedPath": "\/img\/solutionBG.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -689,7 +689,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 396049,
+		"initialSize": 92785,
 		"inputAbbreviatedPath": "\/img\/techBG.jpg",
 		"outputAbbreviatedPath": "\/img\/techBG.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -700,7 +700,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.4865e+06,
+		"initialSize": 432620,
 		"inputAbbreviatedPath": "\/img\/techBG1.jpg",
 		"outputAbbreviatedPath": "\/img\/techBG1.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -887,7 +887,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 109263,
+		"initialSize": 121302,
 		"inputAbbreviatedPath": "\/img\/vision-title.png",
 		"outputAbbreviatedPath": "\/img\/vision-title.png",
 		"outputPathIsOutsideProject": 0,
@@ -920,7 +920,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 822949,
+		"initialSize": 792038,
 		"inputAbbreviatedPath": "\/img\/visionBG2.jpg",
 		"outputAbbreviatedPath": "\/img\/visionBG2.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -953,7 +953,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 43312,
+		"initialSize": 32733,
 		"inputAbbreviatedPath": "\/img\/yearbook.jpg",
 		"outputAbbreviatedPath": "\/img\/yearbook.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1081,9 +1081,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "bamm-f",
+	"displayValue": "bamm-final",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "brackets_orange"
+	"iconImageName": "pencil_blue"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
@@ -1176,8 +1176,16 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"no_nested_string_interpolation": {
+			"active": 1,
+			"flagValue": -1
+			},
 		"no_plusplus": {
 			"active": 0,
+			"flagValue": -1
+			},
+		"no_private_function_fat_arrows": {
+			"active": 1,
 			"flagValue": -1
 			},
 		"no_stand_alone_at": {
@@ -1186,6 +1194,10 @@
 			},
 		"no_tabs": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"no_this": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"no_throwing_strings": {
@@ -1347,6 +1359,10 @@
 			"active": 0,
 			"flagValue": -1
 			},
+		"futurehostile": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"globalstrict": {
 			"active": 0,
 			"flagValue": -1
@@ -1433,6 +1449,10 @@
 			},
 		"noarg": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"nocomma": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"node": {
@@ -1535,6 +1555,10 @@
 			"active": 1,
 			"flagValue": -1
 			},
+		"varstmt": {
+			"active": 0,
+			"flagValue": -1
+			},
 		"withstmt": {
 			"active": 0,
 			"flagValue": -1
@@ -1553,10 +1577,6 @@
 			}
 		},
 	"jsLintFlags2": {
-		"ass": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"bitwise": {
 			"active": 0,
 			"flagValue": -1
@@ -1565,15 +1585,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"closure": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"continue": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"debug": {
+		"couch": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1581,75 +1593,27 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"eqeq": {
+		"es6": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"evil": {
+		"eval": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"forin": {
+		"for": {
 			"active": 0,
 			"flagValue": -1
-			},
-		"indent": {
-			"active": 0,
-			"flagValue": 4
 			},
 		"maxlen": {
 			"active": 0,
 			"flagValue": 150
 			},
-		"newcap": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"node": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"nomen": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"plusplus": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"properties": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"regexp": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"rhino": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sloppy": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"stupid": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"sub": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"todo": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unparam": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"vars": {
+		"this": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1658,6 +1622,14 @@
 			"flagValue": -1
 			}
 		},
+	"jsonAutoOutputPathEnabled": 0,
+	"jsonAutoOutputPathFilenamePattern": "*-min.json",
+	"jsonAutoOutputPathRelativePath": "",
+	"jsonAutoOutputPathReplace1": "",
+	"jsonAutoOutputPathReplace2": "",
+	"jsonAutoOutputPathStyle": 0,
+	"jsonOrderOutput": 0,
+	"jsonOutputStyle": 1,
 	"kitAutoOutputPathEnabled": 1,
 	"kitAutoOutputPathFilenamePattern": "*.html",
 	"kitAutoOutputPathRelativePath": "",
@@ -1685,9 +1657,18 @@
 	"markdownAutoOutputPathReplace1": "",
 	"markdownAutoOutputPathReplace2": "",
 	"markdownAutoOutputPathStyle": 0,
-	"markdownEnableFootnotes": 0,
-	"markdownEnableSmartyPants": 1,
-	"markdownExpandTabs": 1,
+	"markdownCriticStyle": 0,
+	"markdownEnableFootnotes": 1,
+	"markdownEnableLabels": 1,
+	"markdownEnableSmartQuotes": 1,
+	"markdownEscapeLineBreaks": 0,
+	"markdownMaskEmailAddresses": 1,
+	"markdownOutputFormat": 0,
+	"markdownOutputStyle": 0,
+	"markdownParseMetadata": 1,
+	"markdownProcessHTML": 0,
+	"markdownRandomFootnoteNumbers": 0,
+	"markdownUseCompatibilityMode": 0,
 	"reloadFileURLs": 0,
 	"sassAutoOutputPathEnabled": 1,
 	"sassAutoOutputPathFilenamePattern": "*.css",
@@ -1733,7 +1714,9 @@
 	"typescriptAutoOutputPathStyle": 2,
 	"typescriptCreateDeclarationFile": 0,
 	"typescriptCreateSourceMap": 0,
+	"typescriptJSXMode": 0,
 	"typescriptMinifyOutput": 0,
+	"typescriptModuleResolutionType": 0,
 	"typescriptModuleType": 0,
 	"typescriptNoImplicitAny": 0,
 	"typescriptPreserveConstEnums": 0,
@@ -1743,6 +1726,10 @@
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
 		"ascii-only": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -1823,6 +1810,10 @@
 			"flagValue": -1
 			},
 		"keep_fargs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"keep_fnames": {
 			"active": 0,
 			"flagValue": -1
 			},
